@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b1c">
+  <meta name="description" content="Manish MK Bhai — Telegram community mein updates aur requests ke liye join karein.">
+  <meta property="og:title" content="Manish MK Bhai | Join the Circle">
+  <meta property="og:description" content="Telegram par Manish MK Bhai community se judein.">
+  <meta property="og:type" content="website">
+  <title>Manish MK Bhai — Join the Circle</title>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f8f7ff;
+      --muted: #b9bdd2;
+      --blue: #5ba9ff;
+      --pink: #ff6bb5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 22px 16px;
+      background: #080b1c;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.34;
+      pointer-events: none;
+      animation: drift 9s ease-in-out infinite alternate;
+    }
+
+    body::before {
+      top: -110px;
+      left: -105px;
+      background: #2378ff;
+    }
+
+    body::after {
+      right: -115px;
+      bottom: -100px;
+      background: #ee3d9e;
+      animation-delay: -4s;
+    }
+
+    .card {
+      position: relative;
+      width: min(100%, 410px);
+      padding: 30px 23px 22px;
+      border: 1px solid transparent;
+      border-radius: 28px;
+      background:
+        linear-gradient(155deg, rgba(20, 27, 57, 0.97), rgba(13, 15, 36, 0.96)) padding-box,
+        linear-gradient(135deg, rgba(99, 177, 255, 0.9), rgba(255, 105, 186, 0.72), rgba(99, 177, 255, 0.22)) border-box;
+      box-shadow: 0 26px 90px #0008, 0 0 55px #5b72ff18;
+      isolation: isolate;
+      overflow: hidden;
+      animation: rise 0.75s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      z-index: -1;
+      background: radial-gradient(260px circle at var(--x, 50%) var(--y, 0%), #74baff18, transparent 65%);
+      pointer-events: none;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 28px;
+    }
+
+    .logo-wrap {
+      width: 54px;
+      height: 54px;
+      flex: none;
+      display: grid;
+      place-items: center;
+      border-radius: 17px;
+      padding: 2px;
+      background: linear-gradient(135deg, var(--blue), var(--pink));
+      box-shadow: 0 0 25px #688bff3d;
+    }
+
+    .logo-inner {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: #11152e;
+      overflow: hidden;
+    }
+
+    .logo-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .logo-fallback {
+      display: none;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      background: linear-gradient(110deg, #9dd9ff, #ff9bd0);
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.1px;
+      line-height: 1.15;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 6px;
+      color: #9ea7c9;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    .status {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 9px;
+      border: 1px solid #ffffff12;
+      border-radius: 999px;
+      background: #ffffff06;
+      color: #c9d3ee;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      white-space: nowrap;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #63e5bd;
+      box-shadow: 0 0 11px #63e5bd;
+      animation: pulse 1.8s infinite;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #9cbfff;
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 320px;
+      font-size: clamp(32px, 9vw, 43px);
+      font-weight: 900;
+      letter-spacing: -1.9px;
+      line-height: 1.05;
+    }
+
+    h1 span {
+      background: linear-gradient(100deg, #9bd5ff 8%, #bdadff 51%, #ff9bce 92%);
+      background-clip: text;
+      color: transparent;
+    }
+
+    .intro {
+      margin: 13px 0 23px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .offers {
+      display: grid;
+      gap: 10px;
+      margin: 0 0 23px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .offers li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      padding: 12px 13px;
+      border: 1px solid #ffffff0c;
+      border-radius: 15px;
+      background: linear-gradient(110deg, #ffffff08, #ffffff03);
+      color: #eef0ff;
+      font-size: 13px;
+      font-weight: 650;
+      line-height: 1.5;
+      animation: fade 0.6s both;
+    }
+
+    .offers li:nth-child(2) {
+      animation-delay: 0.08s;
+    }
+
+    .offers li:nth-child(3) {
+      animation-delay: 0.16s;
+    }
+
+    .offers li:nth-child(4) {
+      animation-delay: 0.24s;
+    }
+
+    .offers li span {
+      flex: none;
+    }
+
+    .cta {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      width: 100%;
+      min-height: 56px;
+      padding: 14px 18px;
+      border: 0;
+      border-radius: 16px;
+      background: linear-gradient(100deg, #397ef3, #8c70fa 54%, #ec68b2);
+      box-shadow: 0 12px 32px #765afa50, inset 0 1px #ffffff55;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0.7px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      top: -60%;
+      left: -45%;
+      width: 30%;
+      height: 220%;
+      background: #ffffff31;
+      transform: rotate(25deg);
+      animation: shine 4s ease-in-out infinite;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 38px #765afa70, inset 0 1px #ffffff55;
+    }
+
+    .cta:active {
+      transform: translateY(0) scale(0.99);
+    }
+
+    .cta svg {
+      width: 18px;
+      height: 18px;
+      flex: none;
+    }
+
+    .note {
+      margin: 13px 2px 0;
+      color: #8e96b4;
+      font-size: 10px;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .divider {
+      height: 1px;
+      margin: 20px 0 14px;
+      background: linear-gradient(90deg, transparent, #ffffff1a, transparent);
+    }
+
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      color: #8f97b2;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.985);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateX(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes pulse {
+      50% {
+        opacity: 0.55;
+        box-shadow: 0 0 4px #63e5bd;
+      }
+    }
+
+    @keyframes drift {
+      to {
+        transform: translate(36px, 26px) scale(1.14);
+      }
+    }
+
+    @keyframes shine {
+      0%, 56% {
+        left: -45%;
+      }
+      85%, 100% {
+        left: 125%;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .card {
+        padding: 25px 18px 19px;
+      }
+
+      .status {
+        font-size: 8px;
+        padding: 6px 7px;
+      }
+
+      .brand {
+        font-size: 15px;
+      }
+
+      .offers li {
+        font-size: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" aria-labelledby="title">
+    <header class="top">
+      <div class="logo-wrap">
+        <div class="logo-inner">
+          <img
+            src="logo.png"
+            alt="Manish MK Bhai logo"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+          >
+          <span class="logo-fallback" aria-hidden="true">MK</span>
+        </div>
+      </div>
+
+      <div class="brand">
+        Manish MK Bhai
+        <small>Official Telegram Circle</small>
+      </div>
+
+      <div class="status"><i class="dot"></i> UPDATES</div>
+    </header>
+
+    <p class="eyebrow">Aapka apna community</p>
+    <h1 id="title">Join the<br><span>MK Circle</span></h1>
+    <p class="intro">Telegram par judiyega — games, updates aur requests ek hi jagah.</p>
+
+    <ul class="offers">
+      <li><span>⚡</span><span>ALL MATKA GAMES AVAILABLE 🔥</span></li>
+      <li><span>🔷</span><span>गरीब लोगो के लिए फ्री गेम पोस्ट करता हूँ 🔷</span></li>
+      <li><span>♦</span><span>जो आता है लॉस कवर करके जाता है ♦</span></li>
+      <li><span>✅</span><span>रिक्वेस्ट भेजो सभी भाई ✅</span></li>
+    </ul>
+
+    <a
+      class="cta"
+      href="https://t.me/+dGEJ5cUDGYIxZDBl"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Telegram par MK Circle join karein"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M21.8 4.6 18.6 20c-.24 1.1-.88 1.37-1.79.85l-4.95-3.65-2.39 2.3c-.26.26-.48.48-.98.48l.35-5.04 9.17-8.28c.4-.35-.09-.55-.62-.2L6.06 13.58l-4.87-1.52c-1.06-.33-1.08-1.06.22-1.57L20.45 3.1c.88-.32 1.66.21 1.35 1.5Z"/>
+      </svg>
+      <span>ENTER THE MK CIRCLE</span>
+      <span aria-hidden="true">↗</span>
+    </a>
+
+    <p class="note">18+ only · Entertainment purposes · Khelne se pehle apni limit tay karein. Jeet ya loss ki guarantee nahi hoti.</p>
+
+    <div class="divider"></div>
+
+    <footer class="foot">
+      <span>Manish MK Bhai</span>
+      <span>Connect · Play Responsibly</span>
+    </footer>
+  </main>
+
+  <script>
+    const card = document.querySelector(".card");
+
+    card.addEventListener("pointermove", (event) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty("--x", `${event.clientX - rect.left}px`);
+      card.style.setProperty("--y", `${event.clientY - rect.top}px`);
+    });
+  </script>
+</body>
+</html>
